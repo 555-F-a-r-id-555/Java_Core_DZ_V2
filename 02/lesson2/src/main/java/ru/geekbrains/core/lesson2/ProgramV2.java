@@ -155,7 +155,7 @@ public class ProgramV2 {
                 break;
             default:
                 for (int n = 0; n < 3; n++) { // число 3 - взял произвольно
-                    // Проверка победы AI на следующем ходу
+                    // Проверка победы AI в следующем ходу
                     for (int i = 0; i < fieldSizeX; i++) {
                         for (int j = 0; j < fieldSizeY; j++) {
                             if (isCellEmpty(i, j)) {
@@ -169,7 +169,7 @@ public class ProgramV2 {
                         }
                     }
 
-                    // Блокирование победы игрока на следующем ходу
+                    // Блокирование победы игрока в следующем ходу
                     for (int i = 0; i < fieldSizeX; i++) {
                         for (int j = 0; j < fieldSizeY; j++) {
                             if (isCellEmpty(i, j)) {
