@@ -22,10 +22,9 @@ public class ProgramV2 {
                         "1) Ai off - 1\n" +
                         "2) Ai random - 2 \n" +
                         "3) Ai immortal - 3\n");
-    
+
                 if (inputScanner.hasNextInt()) {
                     int versionAi = inputScanner.nextInt();
-                    System.out.println("input = " + versionAi);
                     initialize();
                     printField();
                     while (true) {
@@ -67,24 +66,37 @@ public class ProgramV2 {
      * Печать текущего состояния игрового поля
      */
     static void printField() {
-        System.out.print("+");
+        //        Черный: \u001B[30m
+        //        Красный: \u001B[31m
+        //        Зеленый: \u001B[32m
+        //        Желтый: \u001B[33m
+        //        Синий: \u001B[34m
+        //        Пурпурный: \u001B[35m
+        //        Голубой: \u001B[36m
+        //        Белый: \u001B[37m
+        // ANSI escape коды для цветов
+        String resetColor = "\u001B[0m";  // Сброс цвета
+
+        System.out.print("\u001B[36m+"); // Голубой цвет для верхней линии
         for (int x = 0; x < fieldSizeY; x++) {
             System.out.print("-" + (x + 1));
         }
-        System.out.println("-");
+        System.out.println("-" + resetColor); // Сброс цвета после линии
 
+        // Вывод элементов поля с номерами строк в зеленом цвете
         for (int x = 0; x < fieldSizeX; x++) {
-            System.out.print(x + 1 + "|");
+            System.out.print("\u001B[32m" + (x + 1) + "|"); // Зеленый цвет для номеров строк
             for (int y = 0; y < fieldSizeY; y++) {
                 System.out.print(field[x][y] + "|");
             }
             System.out.println();
         }
 
+
         for (int x = 0; x < fieldSizeX * 2 + 2; x++) {
-            System.out.print("-");
+            System.out.print("-"); // Зеленый цвет нижней горизонтальной линии
         }
-        System.out.println();
+        System.out.println(resetColor); // Сброс цвета после линии
     }
 
     /**
