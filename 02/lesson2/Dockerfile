@@ -1,4 +1,5 @@
-FROM openjdk:latest
+FROM openjdk
 WORKDIR /usr/src/app
-COPY out/artifacts/lesson2_jar/lesson2.jar .
+# 02/lesson2/out/artifacts/lesson2_jar/lesson2.jar .
+COPY 02/lesson2/out/artifacts/lesson2_jar/lesson2.jar .
 CMD ["java", "-jar", "lesson2.jar"]
