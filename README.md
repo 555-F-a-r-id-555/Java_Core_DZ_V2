@@ -7,6 +7,60 @@
 4) ** Реализовать интерфейсы для возможности сортировки массива/коллекции (обратите ваше внимание на интерфейсы Comparator, Comparable), добавьте новое состояние на урове базового типа и создайте свой уникальный компаратор.
 5) ** Создать класс, содержащий массив или коллекцию сотрудников (как Worker так и Freelancer), и реализовать возможность вывода данных с использованием foreach (подсказка: вам потребуется поработать с интерфейсом Iterable).
 
+результат вывода:
+
+```python
+V2----------------------------->
+Freelancer{salary=83200, workTime=4, name='Дима', age=20}
+Freelancer{salary=187200, workTime=6, name='Коля', age=30}
+Freelancer{salary=68640, workTime=3, name='Маша', age=24}
+Worker{salary=50000, name='Саша', age=26}
+Worker{salary=70000, name='Оля', age=25}
+Worker{salary=90000, name='Влад', age=32}
+Sorted by salary---------------------------->
+Саша/26 = 50000
+Маша/24 = 68640
+Оля/25 = 70000
+Дима/20 = 83200
+Влад/32 = 90000
+Коля/30 = 187200
+Iteration of sorted salary--------------------------->
+Worker{salary=50000, name='Саша', age=26}
+Freelancer{salary=68640, workTime=3, name='Маша', age=24}
+Worker{salary=70000, name='Оля', age=25}
+Freelancer{salary=83200, workTime=4, name='Дима', age=20}
+Worker{salary=90000, name='Влад', age=32}
+Freelancer{salary=187200, workTime=6, name='Коля', age=30}
+Sorted by age---------------------------->
+Дима/20 = 83200
+Маша/24 = 68640
+Оля/25 = 70000
+Саша/26 = 50000
+Коля/30 = 187200
+Влад/32 = 90000
+Iteration of sorted age--------------------------->
+Freelancer{salary=83200, workTime=4, name='Дима', age=20}
+Freelancer{salary=68640, workTime=3, name='Маша', age=24}
+Worker{salary=70000, name='Оля', age=25}
+Worker{salary=50000, name='Саша', age=26}
+Freelancer{salary=187200, workTime=6, name='Коля', age=30}
+Worker{salary=90000, name='Влад', age=32}
+Sorted by name---------------------------->
+Влад/32 = 90000
+Дима/20 = 83200
+Коля/30 = 187200
+Маша/24 = 68640
+Оля/25 = 70000
+Саша/26 = 50000
+Iteration of sorted name--------------------------->
+Worker{salary=90000, name='Влад', age=32}
+Freelancer{salary=83200, workTime=4, name='Дима', age=20}
+Freelancer{salary=187200, workTime=6, name='Коля', age=30}
+Freelancer{salary=68640, workTime=3, name='Маша', age=24}
+Worker{salary=70000, name='Оля', age=25}
+Worker{salary=50000, name='Саша', age=26}
+```
+
 
 ## Java_Core_DZ_2
 
