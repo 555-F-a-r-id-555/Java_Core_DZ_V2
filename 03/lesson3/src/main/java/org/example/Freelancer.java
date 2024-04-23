@@ -2,8 +2,8 @@ package org.example;
 
 public class Freelancer extends BaseClassForEmployees {
 
-    int workTime;
-    int hourlyRate;
+    private int workTime;
+    private int hourlyRate;
 
     public Freelancer(String name, int age,int workTime,int hourlyRate) {
         super(name, age);

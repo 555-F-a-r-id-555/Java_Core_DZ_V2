@@ -2,7 +2,7 @@ package org.example;
 
 public class Worker extends BaseClassForEmployees{
 
-    int salary;
+   private int salary;
 
 
     public Worker(String name, int age, int salary) {
