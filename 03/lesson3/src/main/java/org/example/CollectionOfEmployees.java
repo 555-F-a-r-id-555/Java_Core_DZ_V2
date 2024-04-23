@@ -31,16 +31,3 @@ public class CollectionOfEmployees {
 
 
 }
-
-
-//        BaseClassForEmployees[] array = new BaseClassForEmployees[]{freelancer$1,
-//                freelancer$1,
-//                freelancer$2,
-//                freelancer$3,
-//                worker$1,
-//                worker$2,
-//                worker$3};
-//
-//
-//        Collections.addAll(arrayList, array);
-//        System.out.println(arrayList.size());
