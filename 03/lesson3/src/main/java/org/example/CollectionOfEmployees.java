@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class CollectionOfEmployees {
 
@@ -27,14 +28,24 @@ public class CollectionOfEmployees {
                 worker$3);
 
 
-        //        arrayList.add(freelancer$1);
-        //        arrayList.add(freelancer$2);
-        //        arrayList.add(freelancer$3);
-        //
-        //        arrayList.add(worker$1);
-        //        arrayList.add(worker$2);
-        //        arrayList.add(worker$3);
+        Random random = new Random();
 
+        // Freelancer
+//        for (int i = 0; i < 3; i++) {
+//            String name = "Freelancer " + (i + 1);
+//            int age = random.nextInt(40) + 20; // возраст от 20 до 59 лет
+//            int experience = random.nextInt(10) + 1; // время работы от 1 до 8 часов
+//            int salary = random.nextInt(2000) + 1000; // заработная плата от 1000 до 2999
+//            arrayList.add(new Freelancer(name, age, experience, salary));
+//        }
+
+        // Worker
+//        for (int i = 0; i < 3; i++) {
+//            String name = "Worker " + (i + 1);
+//            int age = random.nextInt(40) + 20; // возраст от 20 до 59 лет
+//            int salary = random.nextInt(90000) + 10000; // заработная плата от 10000 до 99999
+//            arrayList.add(new Worker(name, age, salary));
+//        }
 
         return arrayList;
     }

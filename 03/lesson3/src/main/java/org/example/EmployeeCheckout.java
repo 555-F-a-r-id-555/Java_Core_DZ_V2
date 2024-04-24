@@ -13,16 +13,34 @@ public class EmployeeCheckout implements EmployeeSorting {
      private EmployeeIterator iterator = new EmployeeIterator(list);
 
     public  void iterateOfEmployees(){
+        System.out.print("\u001B[36m+");
         // Перебирайте элементы, используя итератор
         while (iterator.hasNext()) {
             BaseClassForEmployees employee = iterator.next();
             System.out.println(employee);
         }
+        System.out.println("\u001B[0m"); // Сброс цвета
     }
 
 
     @Override
     public void sortedBySalary() {
+        //        Черный: \u001B[30m
+        //        Красный: \u001B[31m
+        //        Зеленый: \u001B[32m
+        //        Желтый: \u001B[33m
+        //        Синий: \u001B[34m
+        //        Пурпурный: \u001B[35m
+        //        Голубой: \u001B[36m
+        //        Белый: \u001B[37m
+        // ANSI escape коды для цветов
+        // System.out.print("\u001B[36m+"); // Голубой цвет
+        // System.out.print("\u001B[31m+"); // Красный цвет
+        // System.out.print("\u001B[32m+"); // Зеленый цвет
+        // String resetColor = "\u001B[0m";  // Сброс цвета
+        // System.out.println(resetColor); // Сброс цвета
+
+
 //        for (BaseClassForEmployees employee : list) {
 //            System.out.println(employee.getName() + "/" + employee.getAge() + " = " + employee.getSalary());
 //        }
@@ -36,6 +54,7 @@ public class EmployeeCheckout implements EmployeeSorting {
 //            }
 //        });
 
+        System.out.print("\u001B[32m+");
         // Либо так V3 -------------------------------------------------------------->
         Collections.sort(list, new EmployeesComparator()); //== list.sort(new SalaryComparator());
 
@@ -48,8 +67,6 @@ public class EmployeeCheckout implements EmployeeSorting {
         System.out.println("Iteration of sorted salary--------------------------->");
         iterator = new EmployeeIterator(list); // просто для примера
         iterateOfEmployees();
-
-
     }
 
     @Override
@@ -62,6 +79,7 @@ public class EmployeeCheckout implements EmployeeSorting {
 //            return 0;
 //        });
 
+        System.out.print("\u001B[32m+");
         // Либо так V3---------------------------------------------------------------------->
 
         list.sort(Comparator.comparingInt(BaseClassForEmployees::getAge));
@@ -83,6 +101,7 @@ public class EmployeeCheckout implements EmployeeSorting {
     public void sortedByName() {
         Collections.sort(list, Comparator.comparing(BaseClassForEmployees::getName));
 
+        System.out.print("\u001B[32m+");
         System.out.println("Sorted by name---------------------------->");
 
         for (BaseClassForEmployees employee : list) {
