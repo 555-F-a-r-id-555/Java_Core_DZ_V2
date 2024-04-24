@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CollectionOfEmployees {
 
@@ -15,19 +16,28 @@ public class CollectionOfEmployees {
         Worker worker$3 = new Worker("Влад", 32, 90_000);
 
         ArrayList<BaseClassForEmployees> arrayList = new ArrayList<>();
-        arrayList.add(freelancer$1);
-        arrayList.add(freelancer$2);
-        arrayList.add(freelancer$3);
 
-        arrayList.add(worker$1);
-        arrayList.add(worker$2);
-        arrayList.add(worker$3);
 
+        Collections.addAll(arrayList,
+                freelancer$1,
+                freelancer$2,
+                freelancer$3,
+                worker$1,
+                worker$2,
+                worker$3);
+
+
+        //        arrayList.add(freelancer$1);
+        //        arrayList.add(freelancer$2);
+        //        arrayList.add(freelancer$3);
+        //
+        //        arrayList.add(worker$1);
+        //        arrayList.add(worker$2);
+        //        arrayList.add(worker$3);
 
 
         return arrayList;
     }
-
 
 
 }
