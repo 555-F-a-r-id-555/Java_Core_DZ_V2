@@ -25,30 +25,13 @@ public class Tree {
         }
         System.out.println(file.getName());
 
-//        if (file.isDirectory()) {
             File[] files = file.listFiles();
             if (files != null) {
                 for (int i = 0; i < files.length; i++) {
                     print(files[i], indent, i == files.length - 1);
                 }
-//            }
         }
 
-//        File[] files = file.listFiles();
-//
-//        if (files != null) {     // Добавил проверку на null и удалил проверку на директории
-//
-//            int subDirTotal = 0;
-//
-//            for (int i = 0; i < files.length; i++) {
-//                    subDirTotal++;
-//            }
-//
-//            int subDirCounter = 0;
-//            for (int i = 0; i < files.length; i++) {
-//                    print(files[i], indent, subDirTotal == ++subDirCounter);
-//            }
-//        }
 
     }
 
