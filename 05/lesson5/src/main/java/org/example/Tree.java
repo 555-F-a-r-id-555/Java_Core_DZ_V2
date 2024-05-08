@@ -25,14 +25,12 @@ public class Tree {
         }
         System.out.println(file.getName());
 
-            File[] files = file.listFiles();
-            if (files != null) {
-                for (int i = 0; i < files.length; i++) {
-                    print(files[i], indent, i == files.length - 1);
-                }
+        File[] files = file.listFiles();
+        if (files != null) {
+            for (int i = 0; i < files.length; i++) {
+                print(files[i], indent, i == files.length - 1);
+            }
         }
-
-
     }
 
 }
