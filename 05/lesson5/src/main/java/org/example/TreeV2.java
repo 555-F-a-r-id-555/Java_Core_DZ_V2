@@ -26,14 +26,11 @@ public class TreeV2 {
         File[] files = file.listFiles();
 
         if (files != null) {
-            if (file.isDirectory()) {
                 for (int i = 0; i < files.length; i++) {
                     if (!files[i].isFile()) {
                         print(files[i], indent, i == files.length - 1);
                     }
                 }
-            }
-
 
             int countFilesTotal = 0;
             for (File value : files) {
